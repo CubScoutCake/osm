@@ -2,7 +2,7 @@
 class OSM {
 	const CACHE_NONE = 0x00;
 	const CACHE_NONPERSISTENT = 0x01;
-	const CACHE_PERSISTENT = 0x02;
+	const CACHE_PERSISTENT = 0x03;
 	
 	const BADGETYPE_CHALLENGE = "challenge";
 	const BADGETYPE_STAGED = "staged";
