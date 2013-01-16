@@ -84,10 +84,10 @@ class OSM {
 	 * @return boolean
 	 */
 	public function isAuthorized() {
-		if ($this->userid !== false) {
-			return true;
+		if ($this->userid === null) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 	
 	/**
@@ -111,6 +111,7 @@ class OSM {
 			$_SESSION['osm_userid'] = $this->userid;
 			$_SESSION['osm_secret'] = $this->secret;
 		}
+		var_dump($this);
 		$this->destroyPersistantCache();
 		return true;
 	}
@@ -127,9 +128,7 @@ class OSM {
 	private function perform_query($url, $parts=array(), $cachetype=0) {
 		$parts['token'] = $this->token;
 		$parts['apiid'] = $this->apiid;
-		if (!$this->isAuthorized()) {
-			throw new Exception("OSM API not authorized");
-		}
+		
 		$parts['userid'] = $this->userid;
 		$parts['secret'] = $this->secret;
 		
