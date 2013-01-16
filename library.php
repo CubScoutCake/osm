@@ -1,8 +1,9 @@
 <?php
 class OSM {
 	const CACHE_NONE = 0x00;
-	const CACHE_NONPERSISTENT = 0x01;
-	const CACHE_PERSISTENT = 0x03;
+	const CACHE_NONPERSISTANT = 0x01;
+	const CACHE_PERSISTANTEXCLUSIVE = 0x02;
+	const CACHE_PERSISTANT = 0x03;
 	
 	const BADGETYPE_CHALLENGE = "challenge";
 	const BADGETYPE_STAGED = "staged";
@@ -110,7 +111,7 @@ class OSM {
 			$_SESSION['osm_userid'] = $this->userid;
 			$_SESSION['osm_secret'] = $this->secret;
 		}
-		$this->destroyPersistentCache();
+		$this->destroyPersistantCache();
 		return true;
 	}
 	
@@ -160,11 +161,11 @@ class OSM {
 	 */
 	private function getCache($url, $data, $type) {
 		$datahash = sha1($url."?".$data);
-		if ($type & 0x01 && isset($this->cache[$datahash])) {
+		if ($type & self::CACHE_NONPERSISTANT && isset($this->cache[$datahash])) {
 			return $this->cache[sha1($url."?".$data)];
 		}
 		
-		if ($type & 0x02 && isset($_SESSION['osm_cache']) && isset($_SESSION['osm_cache'][$datahash])) {
+		if ($type & self::CACHE_PERSISTANTEXCLUSIVE && isset($_SESSION['osm_cache']) && isset($_SESSION['osm_cache'][$datahash])) {
 			return $_SESSION['osm_cache'][$datahash];
 		}
 		return null;
@@ -182,11 +183,11 @@ class OSM {
 	 */
 	private function setCache($url, $data, $type, $return) {
 		$datahash = sha1($url."?".$data);
-		if ($type & 0x01) {
+		if ($type & self::CACHE_NONPERSISTANT) {
 			$this->cache[sha1($url."?".$data)] = $return;
 		}
 		
-		if ($type & 0x02) {
+		if ($type & self::CACHE_PERSISTANTEXCLUSIVE) {
 			if (!isset($_SESSION['osm_cache'])) {
 				$_SESSION['osm_cache'] = array();
 			}
@@ -199,7 +200,7 @@ class OSM {
 	 * 
 	 * @return null
 	 */
-	public function destroyPersistentCache() {
+	public function destroyPersistantCache() {
 		if (isset($_SESSION['osm_cache'])) {
 			$_SESSION['osm_cache'] = array();
 		}
