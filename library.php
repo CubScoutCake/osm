@@ -111,7 +111,6 @@ class OSM {
 			$_SESSION['osm_userid'] = $this->userid;
 			$_SESSION['osm_secret'] = $this->secret;
 		}
-		var_dump($this);
 		$this->destroyPersistantCache();
 		return true;
 	}
@@ -132,8 +131,8 @@ class OSM {
 		$parts['userid'] = $this->userid;
 		$parts['secret'] = $this->secret;
 		
-		
 		$data = http_build_query($parts);
+    
 		if ($cache = $this->getCache($url, $data, $cachetype)) {
 			return $cache;
 		}
@@ -144,6 +143,9 @@ class OSM {
 		curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
 		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
 		$msg = curl_exec($curl_handle);
+    if($msg === false){
+      print "error: " . curl_error($curl_handle);
+    }
 		$out = json_decode($msg);
 		$this->setCache($url, $data, $cachetype, $cachetype, $out);
 		return $out;
@@ -213,6 +215,24 @@ class OSM {
 	public function getTerms() {
 		return $this->perform_query('api.php?action=getTerms');
 	}
+  
+  /**
+   * Get the current term for a given section
+   * 
+   * @param string $sectionid The section ID returned by getTerms()
+   * 
+   * @return Object
+   */
+   
+  function getThisTerm($sectionid) {
+    $section = $this->getTerms()->{$sectionid};
+    foreach($section as $term) {
+      if(strtotime($term->startdate) <= strtotime('now') && strtotime($term->enddate) >= strtotime('now')) {
+        return $term;
+      }
+    }
+  }
+
 	
 	/**
 	 * Get badges available
@@ -222,7 +242,7 @@ class OSM {
 	 * @return Object
 	 */
 	public function getBadges($type=null) {
-		perform_query('challenges.php?action=getBadgeDetails&section=scouts&badgeType=challenge', $type==null? array(): array("badgeType"=>$type)); //badgeType = challenge/staged/activity
+		$this->perform_query('challenges.php?action=getBadgeDetails&section=scouts&badgeType=challenge', $type==null? array(): array("badgeType"=>$type)); //badgeType = challenge/staged/activity
 	}
 	
 	/**
@@ -233,8 +253,20 @@ class OSM {
 	 * @return object
 	 */
 	public function getEvents($sectionid) {
-		$events = perform_query('events.php?action=getEvents&sectionid='.$sectionid);
+		$events = $this->perform_query('events.php?action=getEvents&sectionid='.$sectionid);
 		return $events;
+	}
+  
+	/**
+	 * Get a list of patrols
+	 * 
+	 * @param string $sectionid The section ID returned by getTerms()
+	 * 
+	 * @return Object
+	 */
+	public function getPatrols($sectionid) {
+		$patrols = $this->perform_query('users.php?action=getPatrols&sectionid='. $sectionid);
+    return $patrols->patrols;
 	}
 	
 	/**
@@ -246,6 +278,6 @@ class OSM {
 	 * @return Object
 	 */
 	public function getKidsByTermID($sectionid, $termid) {
-		return perform_query('challenges.php?termid='.$termid.'&type=challenge&section=scouts&c=community&sectionid='. $sectionid, array());
+		return $this->perform_query('challenges.php?termid='.$termid.'&type=challenge&section=scouts&c=community&sectionid='. $sectionid, array());
 	}
 }
