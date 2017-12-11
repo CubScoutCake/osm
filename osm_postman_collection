@@ -1,0 +1,1470 @@
+{
+		"info": {
+			"name": "Online Scout Manager",
+			"_postman_id": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8",
+			"description": "",
+			"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		},
+		"item": [
+			{
+				"name": "APIs Core Setup",
+				"description": "",
+				"item": [
+					{
+						"name": "API - Authorise",
+						"request": {
+							"method": "POST",
+							"header": [
+								{
+									"key": "Content-type",
+									"value": "application/x-www-form-urlencoded"
+								}
+							],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"type": "text",
+										"value": "{{API_ID}}"
+									},
+									{
+										"key": "token",
+										"type": "text",
+										"value": "{{API_TOKEN}}"
+									},
+									{
+										"key": "email",
+										"type": "text",
+										"value": "{{USER_EMAIL}}"
+									},
+									{
+										"key": "password",
+										"type": "text",
+										"value": "{{USER_PASSWORD}}"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/users.php?action=authorise",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"users.php"
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "authorise"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": [
+							{
+								"id": "36691ec3-2230-44c3-8261-8c0255679c1b",
+								"name": "API - Authorise",
+								"originalRequest": {
+									"method": "POST",
+									"header": [
+										{
+											"key": "Content-type",
+											"value": "application/x-www-form-urlencoded"
+										}
+									],
+									"body": {
+										"mode": "urlencoded",
+										"urlencoded": [
+											{
+												"key": "apiid",
+												"type": "text",
+												"value": "{{API_ID}}"
+											},
+											{
+												"key": "token",
+												"type": "text",
+												"value": "{{API_TOKEN}}"
+											},
+											{
+												"key": "email",
+												"type": "text",
+												"value": "{{USER_EMAIL}}"
+											},
+											{
+												"key": "password",
+												"type": "text",
+												"value": "{{USER_PASSWORD}}"
+											}
+										]
+									},
+									"url": {
+										"raw": "https://www.onlinescoutmanager.co.uk/users.php?action=authorise",
+										"protocol": "https",
+										"host": [
+											"www",
+											"onlinescoutmanager",
+											"co",
+											"uk"
+										],
+										"path": [
+											"users.php"
+										],
+										"query": [
+											{
+												"key": "action",
+												"value": "authorise",
+												"equals": true
+											}
+										]
+									}
+								},
+								"status": "OK",
+								"code": 200,
+								"_postman_previewlanguage": "json",
+								"_postman_previewtype": "text",
+								"header": [
+									{
+										"key": "CF-RAY",
+										"value": "3b6938692dc234dc-LHR",
+										"name": "CF-RAY",
+										"description": "Custom header"
+									},
+									{
+										"key": "Cache-control",
+										"value": "private",
+										"name": "Cache-control",
+										"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"name": "Connection",
+										"description": "Options that are desired for the connection"
+									},
+									{
+										"key": "Content-Encoding",
+										"value": "gzip",
+										"name": "Content-Encoding",
+										"description": "The type of encoding used on the data."
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"name": "Content-Type",
+										"description": "The mime type of this content"
+									},
+									{
+										"key": "Date",
+										"value": "Tue, 31 Oct 2017 20:03:54 GMT",
+										"name": "Date",
+										"description": "The date and time that the message was sent"
+									},
+									{
+										"key": "Expires",
+										"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+										"name": "Expires",
+										"description": "Gives the date/time after which the response is considered stale"
+									},
+									{
+										"key": "Pragma",
+										"value": "no-cache",
+										"name": "Pragma",
+										"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+									},
+									{
+										"key": "Server",
+										"value": "cloudflare-nginx",
+										"name": "Server",
+										"description": "A name for the server"
+									},
+									{
+										"key": "Strict-Transport-Security",
+										"value": "max-age=2678400;",
+										"name": "Strict-Transport-Security",
+										"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+									},
+									{
+										"key": "Transfer-Encoding",
+										"value": "chunked",
+										"name": "Transfer-Encoding",
+										"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+									},
+									{
+										"key": "Vary",
+										"value": "Accept-Encoding",
+										"name": "Vary",
+										"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+									}
+								],
+								"cookie": [
+									{
+										"expires": "Wed Oct 31 2018 16:49:28 GMT+0000 (GMT)",
+										"httpOnly": true,
+										"domain": "onlinescoutmanager.co.uk",
+										"path": "/",
+										"secure": false,
+										"value": "d853a7d474ed5c6079d19eab025d5ac671509468568",
+										"key": "__cfduid"
+									},
+									{
+										"expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (GMT)",
+										"httpOnly": true,
+										"domain": "www.onlinescoutmanager.co.uk",
+										"path": "/",
+										"secure": true,
+										"value": "1~2eju0e40a3gohkqgpfdfab4437",
+										"key": "OYM"
+									}
+								],
+								"responseTime": 194,
+								"body": "{\"secret\":\"94c6d3ddc024c456005348db40136783\",\"userid\":\"19285\"}"
+							}
+						]
+					},
+					{
+						"name": "API - Terms",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/api.php?action=getTerms",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"api.php"
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getTerms"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					},
+					{
+						"name": "API - Section Config",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"type": "text",
+										"value": "{{API_ID}}"
+									},
+									{
+										"key": "token",
+										"type": "text",
+										"value": "{{API_TOKEN}}"
+									},
+									{
+										"key": "userid",
+										"type": "text",
+										"value": "{{USER_ID}}"
+									},
+									{
+										"key": "secret",
+										"type": "text",
+										"value": "{{USER_SECRET}}"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/api.php?action=getSectionConfig",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"api.php"
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getSectionConfig"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					},
+					{
+						"name": "API - User Roles",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/api.php?action=getUserRoles",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"api.php"
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getUserRoles"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": [
+							{
+								"id": "3964a33b-6b24-4a5d-a550-b869e17055c1",
+								"name": "API - User Roles",
+								"originalRequest": {
+									"method": "POST",
+									"header": [],
+									"body": {
+										"mode": "urlencoded",
+										"urlencoded": [
+											{
+												"key": "apiid",
+												"value": "{{API_ID}}",
+												"type": "text"
+											},
+											{
+												"key": "token",
+												"value": "{{API_TOKEN}}",
+												"type": "text"
+											},
+											{
+												"key": "userid",
+												"value": "{{USER_ID}}",
+												"type": "text"
+											},
+											{
+												"key": "secret",
+												"value": "{{USER_SECRET}}",
+												"type": "text"
+											}
+										]
+									},
+									"url": {
+										"raw": "https://www.onlinescoutmanager.co.uk/api.php?action=getUserRoles",
+										"protocol": "https",
+										"host": [
+											"www",
+											"onlinescoutmanager",
+											"co",
+											"uk"
+										],
+										"path": [
+											"api.php"
+										],
+										"query": [
+											{
+												"key": "action",
+												"value": "getUserRoles",
+												"equals": true
+											}
+										]
+									}
+								},
+								"status": "OK",
+								"code": 200,
+								"_postman_previewlanguage": "json",
+								"_postman_previewtype": "text",
+								"header": [
+									{
+										"key": "CF-RAY",
+										"value": "3b69a28a4859357e-LHR",
+										"name": "CF-RAY",
+										"description": "Custom header"
+									},
+									{
+										"key": "Cache-control",
+										"value": "private",
+										"name": "Cache-control",
+										"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+									},
+									{
+										"key": "Connection",
+										"value": "keep-alive",
+										"name": "Connection",
+										"description": "Options that are desired for the connection"
+									},
+									{
+										"key": "Content-Encoding",
+										"value": "gzip",
+										"name": "Content-Encoding",
+										"description": "The type of encoding used on the data."
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8",
+										"name": "Content-Type",
+										"description": "The mime type of this content"
+									},
+									{
+										"key": "Date",
+										"value": "Tue, 31 Oct 2017 21:16:21 GMT",
+										"name": "Date",
+										"description": "The date and time that the message was sent"
+									},
+									{
+										"key": "Expires",
+										"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+										"name": "Expires",
+										"description": "Gives the date/time after which the response is considered stale"
+									},
+									{
+										"key": "Pragma",
+										"value": "no-cache",
+										"name": "Pragma",
+										"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+									},
+									{
+										"key": "Server",
+										"value": "cloudflare-nginx",
+										"name": "Server",
+										"description": "A name for the server"
+									},
+									{
+										"key": "Strict-Transport-Security",
+										"value": "max-age=2678400;",
+										"name": "Strict-Transport-Security",
+										"description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+									},
+									{
+										"key": "Transfer-Encoding",
+										"value": "chunked",
+										"name": "Transfer-Encoding",
+										"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+									},
+									{
+										"key": "Vary",
+										"value": "Accept-Encoding",
+										"name": "Vary",
+										"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+									}
+								],
+								"cookie": [
+									{
+										"expires": "Wed Oct 31 2018 16:49:28 GMT+0000 (GMT)",
+										"httpOnly": true,
+										"domain": "onlinescoutmanager.co.uk",
+										"path": "/",
+										"secure": false,
+										"value": "d853a7d474ed5c6079d19eab025d5ac671509468568",
+										"key": "__cfduid"
+									},
+									{
+										"expires": "Tue Jan 19 2038 03:14:07 GMT+0000 (GMT)",
+										"httpOnly": true,
+										"domain": "www.onlinescoutmanager.co.uk",
+										"path": "/",
+										"secure": true,
+										"value": "1~2eju0e40a3gohkqgpfdfab4437",
+										"key": "OYM"
+									}
+								],
+								"responseTime": 180,
+								"body": "[{\"sectionConfig\":{\"numscouts\":999,\"subscription_level\":1,\"subscription_expires\":\"2013-07-09\",\"sectionType\":\"waiting\",\"section_type\":\"waiting\",\"programmeShare\":{\"from\":\"19285\",\"from_section\":\"11754\",\"from_term\":\"23997\"},\"qmshare\":{\"119\":true},\"parentSectionId\":\"0\"},\"groupname\":\"4th Letchworth (St Pauls)\",\"groupid\":\"4056\",\"sectionid\":\"11940\",\"sectionname\":\"Beaver Waiting List\",\"section\":\"waiting\",\"isDefault\":\"0\",\"permissions\":{\"badge\":\"20\",\"member\":\"20\",\"user\":\"100\",\"register\":0,\"programme\":0,\"flexi\":\"20\",\"finance\":\"20\",\"quartermaster\":0},\"regdate\":\"2013-01-08\"},{\"sectionConfig\":{\"numscouts\":999,\"subscription_level\":3,\"subscription_expires\":\"2017-11-16\",\"portal\":{\"paymentRemindFrequency\":\"7\",\"paymentRemindCount\":\"3\",\"emailAddress\":\"beavers@4thletchworth.com\",\"emailAddressCopy\":\"beavers@4thletchworth.com\",\"payments\":\"1\",\"emails\":{\"email1\":\"true\",\"email2\":\"true\",\"email3\":\"false\",\"email4\":\"false\"},\"events\":1,\"programme\":1,\"badges\":1,\"parseemail\":0,\"eventRemindFrequency\":\"7\",\"eventRemindCount\":\"3\",\"programmeSummary\":1,\"badgesPartial\":\"1\",\"programmeTimes\":1,\"programmeShow\":\"0\",\"programmeParentHelp\":\"email\",\"details\":1,\"emailbolton\":1,\"showStore\":1,\"contactNotificationEmail\":\"beavers@4thletchworth.com\",\"autoGiftAid\":\"0\",\"charityName\":\"4th Letchworth Scout Group\",\"badgesEmail\":\"1\",\"personalDetailsHeader\":\"\"},\"sectionType\":\"beavers\",\"hasUsedBadgeRecords\":true,\"subscription_lastExpires\":\"2016-11-10\",\"subscription_active\":\"braintree\",\"portalExpires\":{\"events\":\"2017-11-16\",\"eventsA\":2,\"programme\":\"2017-11-16\",\"programmeA\":2,\"badges\":\"2017-11-16\",\"badgesA\":2,\"details\":\"2017-11-16\",\"detailsA\":2,\"emailbolton\":\"2017-11-16\",\"emailboltonA\":2},\"section_type\":\"beavers\",\"extraRecords\":[{\"name\":\"Information Update Forms\",\"extraid\":\"11059\"}],\"hasProgramme\":true,\"gocardless\":\"true\",\"subscription_cancelled\":\"2016-11-07\",\"qmshare\":{\"119\":true,\"129\":true,\"127\":true,\"133\":true,\"146\":true,\"446\":true,\"1079\":true,\"1779\":true,\"2419\":true,\"2431\":true,\"3450\":true,\"3451\":true},\"parentSectionId\":\"0\"},\"groupname\":\"4th Letchworth (St Pauls)\",\"groupid\":\"4056\",\"sectionid\":\"11754\",\"sectionname\":\"Beavers\",\"section\":\"beavers\",\"isDefault\":\"0\",\"permissions\":{\"badge\":\"20\",\"member\":\"20\",\"user\":\"100\",\"register\":\"20\",\"contact\":0,\"programme\":\"20\",\"finance\":\"20\",\"flexi\":\"20\",\"events\":\"20\",\"quartermaster\":\"20\"},\"regdate\":\"2013-01-03\"},{\"sectionConfig\":{\"numscouts\":999,\"subscription_level\":1,\"subscription_expires\":\"2014-01-03\",\"sectionType\":\"waiting\",\"section_type\":\"waiting\",\"qmshare\":{\"119\":true},\"parentSectionId\":\"0\"},\"groupname\":\"4th Letchworth (St Pauls)\",\"groupid\":\"4056\",\"sectionid\":\"15962\",\"sectionname\":\"Cub Waiting List\",\"section\":\"waiting\",\"isDefault\":\"0\",\"permissions\":{\"badge\":100,\"member\":100,\"user\":100,\"register\":100,\"contact\":100,\"programme\":100,\"originator\":1,\"events\":100,\"finance\":100,\"flexi\":100,\"quartermaster\":100},\"regdate\":\"2013-07-05\"},{\"sectionConfig\":{\"numscouts\":999,\"subscription_level\":3,\"subscription_expires\":\"2017-11-11\",\"sectionType\":\"cubs\",\"hasProgramme\":true,\"hasUsedBadgeRecords\":true,\"subscription_lastExpires\":\"2016-11-10\",\"subscription_active\":\"braintree\",\"extraRecords\":{\"1\":{\"name\":\"New Contact System\",\"extraid\":\"22566\"}},\"portal\":{\"paymentRemindFrequency\":\"7\",\"paymentRemindCount\":\"3\",\"eventRemindFrequency\":\"7\",\"eventRemindCount\":\"3\",\"programmeSummary\":\"1\",\"badgesPartial\":\"1\",\"emailAddress\":\"cubs@4thletchworth.com\",\"emailAddressCopy\":\"\",\"payments\":\"1\",\"badges\":1,\"emails\":{\"email2\":\"true\",\"email1\":\"true\",\"email3\":\"false\",\"email4\":\"false\"},\"events\":1,\"programme\":1,\"parseemail\":0,\"programmeTimes\":\"1\",\"programmeShow\":\"0\",\"programmeParentHelp\":\"email\",\"details\":1,\"emailbolton\":1,\"showStore\":1,\"contactNotificationEmail\":\"cubs@4thletchworth.com\",\"autoGiftAid\":\"1\",\"charityName\":\"4th Letchworth Scout Group\",\"personalDetailsHeader\":\"This is the information we hold on the Cubs - Please fill it in with as much completeness as possible as it will mean we are better equipped to deal will issues. As many contact numbers \\/ details as possible should be added (but can be set not to receive texts \\/ emails) as these numbers will be how we contact you in the event of emergency, therefore the more details we have the easier it is for us to contact you.\",\"badgesEmail\":\"1\",\"programmeDownloadButton\":\"1\",\"programmeIcs\":\"1\",\"programmeShowBadges\":\"1\",\"badgesShowRequirements\":true},\"portalExpires\":{\"events\":\"2017-11-11\",\"eventsA\":2,\"programme\":\"2017-11-11\",\"programmeA\":2,\"badges\":\"2017-11-11\",\"badgesA\":2,\"details\":\"2017-11-11\",\"detailsA\":2,\"emailbolton\":\"2017-11-11\",\"emailboltonA\":2},\"section_type\":\"cubs\",\"gocardless\":\"true\",\"subscription_cancelled\":\"2016-11-07\",\"qmshare\":{\"129\":true,\"127\":true,\"133\":true,\"146\":true,\"446\":true,\"1079\":true,\"1779\":true,\"2419\":true,\"2431\":true,\"3451\":true},\"sms_remaining\":-29,\"hasSentTestSMS\":true,\"sms_sent\":534,\"parentSectionId\":\"0\"},\"groupname\":\"4th Letchworth (St Pauls)\",\"groupid\":\"4056\",\"sectionid\":\"11122\",\"sectionname\":\"Cubs\",\"section\":\"cubs\",\"isDefault\":\"1\",\"permissions\":{\"badge\":\"20\",\"member\":\"20\",\"user\":\"100\",\"register\":\"20\",\"programme\":\"20\",\"events\":\"20\",\"flexi\":\"20\",\"finance\":\"20\",\"quartermaster\":\"20\"},\"regdate\":\"2012-11-23\"},{\"sectionConfig\":{\"numscouts\":999,\"subscription_level\":1,\"subscription_expires\":\"2013-07-09\",\"sectionType\":\"adults\",\"hasUsedBadgeRecords\":true,\"portal\":{\"paymentRemindFrequency\":\"-1\",\"paymentRemindCount\":\"-1\",\"emailAddress\":\"jacob@4thletchworthscoutgroup.com\",\"emailAddressCopy\":\"\",\"payments\":\"0\",\"emailbolton\":0,\"badges\":0,\"programme\":0,\"events\":0,\"parseemail\":0},\"section_type\":\"adults\",\"portalExpires\":{\"emailbolton\":\"2015-11-11\",\"emailboltonA\":0},\"qmshare\":{\"119\":true},\"parentSectionId\":\"0\"},\"groupname\":\"4th Letchworth (St Pauls)\",\"groupid\":\"4056\",\"sectionid\":\"11938\",\"sectionname\":\"Group & Adults\",\"section\":\"adults\",\"isDefault\":\"0\",\"permissions\":{\"badge\":\"20\",\"member\":\"20\",\"user\":\"100\",\"register\":0,\"programme\":0,\"events\":\"20\",\"flexi\":\"20\",\"finance\":\"20\",\"quartermaster\":\"20\"},\"regdate\":\"2013-01-08\"},{\"sectionConfig\":{\"numscouts\":26,\"subscription_level\":1,\"subscription_expires\":\"2015-03-03\",\"section_type\":\"adults\",\"sectionType\":\"adults\",\"parentSectionId\":\"0\",\"hasUsedBadgeRecords\":true},\"groupname\":\"4th Letchworth (St Pauls)\",\"groupid\":\"4056\",\"sectionid\":\"22570\",\"sectionname\":\"Parent Helpers\",\"section\":\"adults\",\"isDefault\":\"0\",\"permissions\":{\"badge\":100,\"member\":100,\"user\":100,\"register\":100,\"contact\":100,\"programme\":100,\"originator\":1,\"events\":100,\"finance\":100,\"flexi\":100,\"quartermaster\":100},\"regdate\":\"2014-09-02\"},{\"sectionConfig\":{\"numscouts\":999,\"subscription_level\":3,\"subscription_expires\":\"2017-11-16\",\"sectionType\":\"scouts\",\"hasProgramme\":true,\"hasUsedBadgeRecords\":true,\"subscription_lastExpires\":\"2016-12-05\",\"subscription_active\":\"braintree\",\"portal\":{\"paymentRemindFrequency\":\"14\",\"paymentRemindCount\":\"3\",\"eventRemindFrequency\":\"3\",\"eventRemindCount\":\"1\",\"programmeSummary\":1,\"badgesPartial\":\"0\",\"emailAddress\":\"scouts@4thletchworth.com\",\"emailAddressCopy\":\"\",\"payments\":\"1\",\"badges\":1,\"emails\":{\"email1\":\"true\",\"email2\":\"true\",\"email3\":\"false\",\"email4\":\"false\"},\"events\":1,\"programme\":1,\"parseemail\":0,\"programmeTimes\":1,\"programmeShow\":\"0\",\"programmeParentHelp\":\"email\",\"details\":1,\"emailbolton\":1,\"showStore\":1,\"contactNotificationEmail\":\"scouts@4thletchworth.com\",\"autoGiftAid\":\"0\",\"charityName\":\"4th Letchworth Scout Group\",\"personalDetailsHeader\":\"\",\"badgesEmail\":\"1\",\"badgesShowRequirements\":false},\"portalExpires\":{\"events\":\"2017-11-16\",\"eventsA\":2,\"programme\":\"2017-11-16\",\"programmeA\":2,\"badges\":\"2017-11-16\",\"badgesA\":2,\"details\":\"2017-11-16\",\"detailsA\":2,\"emailbolton\":\"2017-11-16\",\"emailboltonA\":2},\"section_type\":\"scouts\",\"gocardless\":\"true\",\"subscription_cancelled\":\"2016-11-07\",\"qmshare\":{\"119\":true,\"129\":true,\"127\":true,\"133\":true,\"146\":true,\"446\":true,\"1079\":true,\"1779\":true,\"2419\":true,\"2431\":true,\"3451\":true},\"parentSectionId\":\"0\"},\"groupname\":\"4th Letchworth (St Pauls)\",\"groupid\":\"4056\",\"sectionid\":\"9560\",\"sectionname\":\"Scouts\",\"section\":\"scouts\",\"isDefault\":\"0\",\"permissions\":{\"badge\":\"20\",\"member\":\"20\",\"user\":\"100\",\"register\":\"20\",\"programme\":\"20\",\"events\":\"20\",\"flexi\":\"20\",\"finance\":\"20\",\"quartermaster\":\"20\"},\"regdate\":\"2012-09-22\"},{\"sectionConfig\":{\"numscouts\":999,\"subscription_level\":3,\"subscription_expires\":\"2018-09-14\",\"sectionType\":\"cubs\",\"hasProgramme\":true,\"section_type\":\"cubs\",\"parentSectionId\":\"0\",\"hasUsedBadgeRecords\":true,\"subscription_lastExpires\":\"2017-09-17\",\"subscription_active\":\"paypal\",\"trial\":{\"badges\":\"available\",\"programme\":\"available\",\"events\":\"available\",\"details\":\"available\",\"emailbolton\":\"available\",\"any\":\"available\"},\"eventShare\":{\"280276\":{\"section\":\"4th Letchworth (St Pauls): Cubs\",\"start\":\"01\\/10\\/2017\",\"name\":\"District Day Out\"}}},\"groupname\":\"7th Letchworth St Thomas\",\"groupid\":\"4704\",\"sectionid\":\"11792\",\"sectionname\":\"Cubs\",\"section\":\"cubs\",\"isDefault\":\"0\",\"permissions\":{\"badge\":\"20\",\"member\":0,\"user\":\"10\",\"register\":\"20\",\"programme\":\"20\",\"finance\":\"20\"},\"regdate\":\"2013-01-04\"}]"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "Events Tab",
+				"description": "",
+				"item": [
+					{
+						"name": "Get Event Attendance",
+						"request": {
+							"method": "POST",
+							"header": [
+								{
+									"key": "apiid",
+									"value": "{{API_ID}}"
+								},
+								{
+									"key": "token",
+									"value": "{{API_TOKEN}}"
+								},
+								{
+									"key": "userid",
+									"value": "{{USER_ID}}"
+								},
+								{
+									"key": "secret",
+									"value": "{{USER_SECRET}}"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded"
+								}
+							],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"type": "text",
+										"value": "{{API_ID}}"
+									},
+									{
+										"key": "token",
+										"type": "text",
+										"value": "{{API_TOKEN}}"
+									},
+									{
+										"key": "userid",
+										"type": "text",
+										"value": "{{USER_ID}}"
+									},
+									{
+										"key": "secret",
+										"type": "text",
+										"value": "{{USER_SECRET}}"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/events/event/?action=getAttendance&eventid=155445&sectionid={{SECTION_ID}}&termid={{TERM_ID}}",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"events",
+									"event",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getAttendance"
+									},
+									{
+										"key": "eventid",
+										"value": "155445"
+									},
+									{
+										"key": "sectionid",
+										"value": "{{SECTION_ID}}"
+									},
+									{
+										"key": "termid",
+										"value": "{{TERM_ID}}"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					},
+					{
+						"name": "List Event Attachments",
+						"request": {
+							"method": "POST",
+							"header": [
+								{
+									"key": "X-Requested-With",
+									"value": "XMLHttpRequest"
+								},
+								{
+									"key": "User-Agent",
+									"value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Referer",
+									"value": "https://www.onlinescoutmanager.co.uk/main.php?v=23e754b7e12c038aa2a6ce84c62d781a&sid=037acbb90fa867c6e42cee93db9635c9"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, sdch"
+								},
+								{
+									"key": "Accept-Language",
+									"value": "en-GB,en-US;q=0.8,en;q=0.6"
+								},
+								{
+									"key": "Cookie",
+									"value": "PHPSESSID=bg1re02r5qt4lifctpqv69dr92; i18next=en; __utmt=1; email=jacob%404thletchworth.com; phpbb3_djkzkk_u=13688; phpbb3_djkzkk_k=; phpbb3_djkzkk_sid=037acbb90fa867c6e42cee93db9635c9; __utma=26946530.1080014191.1457083174.1457361658.1460549758.5; __utmb=26946530.14.8.1460549771601; __utmc=26946530; __utmz=26946530.1457083174.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+								}
+							],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/uploads/events/?action=listAttachments&sectionid={{SECTION_ID}}&eventid={{EVENT_ID}}",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"uploads",
+									"events",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "listAttachments"
+									},
+									{
+										"key": "sectionid",
+										"value": "{{SECTION_ID}}"
+									},
+									{
+										"key": "eventid",
+										"value": "{{EVENT_ID}}"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					},
+					{
+						"name": "Event Structure & Parameters",
+						"request": {
+							"method": "POST",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded"
+								}
+							],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/events/event/?action=getStructureForEvent&sectionid={{SECTION_ID}}&eventid=155445",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"events",
+									"event",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getStructureForEvent"
+									},
+									{
+										"key": "sectionid",
+										"value": "{{SECTION_ID}}"
+									},
+									{
+										"key": "eventid",
+										"value": "155445"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					},
+					{
+						"name": "Event Summary",
+						"request": {
+							"auth": {
+								"type": "basic",
+								"basic": [
+									{
+										"key": "username",
+										"value": "{{UserName}}",
+										"type": "string"
+									},
+									{
+										"key": "password",
+										"value": "{{Password}}",
+										"type": "string"
+									},
+									{
+										"key": "saveHelperData",
+										"type": "any"
+									},
+									{
+										"key": "showPassword",
+										"value": false,
+										"type": "boolean"
+									}
+								]
+							},
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/events/summary/?action=get&sectionid={{SECTION_ID}}&termid={{TERM_ID}}",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"events",
+									"summary",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "get",
+										"equals": true
+									},
+									{
+										"key": "sectionid",
+										"value": "{{SECTION_ID}}",
+										"equals": true
+									},
+									{
+										"key": "termid",
+										"value": "{{TERM_ID}}",
+										"equals": true
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					}
+				]
+			},
+			{
+				"name": "Invoices Tab",
+				"description": "",
+				"item": [
+					{
+						"name": "Get Invoice",
+						"request": {
+							"method": "POST",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded"
+								}
+							],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/finances/invoices/?action=getInvoice&sectionid={{SECTION_ID}}&invoiceid={{INVOICE_ID}}",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"finances",
+									"invoices",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getInvoice"
+									},
+									{
+										"key": "sectionid",
+										"value": "{{SECTION_ID}}"
+									},
+									{
+										"key": "invoiceid",
+										"value": "{{INVOICE_ID}}"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					}
+				]
+			},
+			{
+				"name": "Personal Details Tab",
+				"description": "",
+				"item": [
+					{
+						"name": "Personal Details",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/members/contact/?action=getListOfMembers&sort=lastname&sectionid={{SECTION_ID}}&termid={{TERM_ID}}&section=cubs",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"members",
+									"contact",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getListOfMembers"
+									},
+									{
+										"key": "sort",
+										"value": "lastname"
+									},
+									{
+										"key": "sectionid",
+										"value": "{{SECTION_ID}}"
+									},
+									{
+										"key": "termid",
+										"value": "{{TERM_ID}}"
+									},
+									{
+										"key": "section",
+										"value": "cubs"
+									}
+								]
+							},
+							"description": "Get the contact information for the Cubs."
+						},
+						"response": []
+					},
+					{
+						"name": "Grid Details",
+						"request": {
+							"method": "POST",
+							"header": [],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									},
+									{
+										"key": "section_id",
+										"value": "{{SECTION_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "term_id",
+										"value": "{{TERM_ID}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/members/contact/grid/?action=getMembers",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"members",
+									"contact",
+									"grid",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getMembers"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					},
+					{
+						"name": "Person Data Update (Custom)",
+						"request": {
+							"method": "POST",
+							"header": [
+								{
+									"key": "Origin",
+									"value": "https://www.onlinescoutmanager.co.uk"
+								},
+								{
+									"key": "X-Requested-With",
+									"value": "XMLHttpRequest"
+								},
+								{
+									"key": "User-Agent",
+									"value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Referer",
+									"value": "https://www.onlinescoutmanager.co.uk/main.php?v=794289948e494f51175a447ab1b3dc19&sid=d48db5a0c5f7025588e39ae91da64dfb"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, br"
+								},
+								{
+									"key": "Accept-Language",
+									"value": "en-US,en;q=0.8,en-GB;q=0.6"
+								},
+								{
+									"key": "Cookie",
+									"value": "PHPSESSID=fs22uoqhhjiahvdr5bddc7lct3; tfa_server=done; __utmt=1; email=jacob%404thletchworth.com; phpbb3_oym_u=13688; phpbb3_oym_k=; phpbb3_oym_sid=d48db5a0c5f7025588e39ae91da64dfb; __utma=26946530.268942814.1473946467.1493974919.1493984423.14; __utmb=26946530.14.8.1493984429978; __utmc=26946530; __utmz=26946530.1475159237.4.4.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)"
+								}
+							],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "associated_id",
+										"value": "{{MEMBER_ID}}"
+									},
+									{
+										"key": "associated_type",
+										"value": "member"
+									},
+									{
+										"key": "context",
+										"value": "members"
+									},
+									{
+										"key": "data[address1]",
+										"value": "street"
+									},
+									{
+										"key": "data[address2]",
+										"value": ""
+									},
+									{
+										"key": "data[address3]",
+										"value": "Letchworth"
+									},
+									{
+										"key": "data[address4]",
+										"value": "Hertfordshire"
+									},
+									{
+										"key": "data[cf_dbs_expiry_date]",
+										"value": ""
+									},
+									{
+										"key": "data[cf_membership_number]",
+										"value": ""
+									},
+									{
+										"key": "data[cf_new_field]",
+										"value": "GOAT"
+									},
+									{
+										"key": "data[cf_new_field_test]",
+										"value": "FISH"
+									},
+									{
+										"key": "data[cf_orphan_p1_crb_complete]",
+										"value": ""
+									},
+									{
+										"key": "data[cf_p1_crb_willing_]",
+										"value": ""
+									},
+									{
+										"key": "data[email1]",
+										"value": "email"
+									},
+									{
+										"key": "data[email1_leaders]",
+										"value": "false"
+									},
+									{
+										"key": "data[email2]",
+										"value": ""
+									},
+									{
+										"key": "data[email2_leaders]",
+										"value": "false"
+									},
+									{
+										"key": "data[firstname]",
+										"value": "firstname"
+									},
+									{
+										"key": "data[lastname]",
+										"value": "last"
+									},
+									{
+										"key": "data[phone1]",
+										"value": "phone"
+									},
+									{
+										"key": "data[phone1_sms]",
+										"value": "false"
+									},
+									{
+										"key": "data[phone2]",
+										"value": "other phone"
+									},
+									{
+										"key": "data[phone2_sms]",
+										"value": "false"
+									},
+									{
+										"key": "data[postcode]",
+										"value": "postcode"
+									},
+									{
+										"key": "group_id",
+										"value": "1"
+									},
+									{
+										"key": "service",
+										"value": "desktop"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/customdata/?action=update&section_id={{SECTION_ID}}",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"customdata",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "update",
+										"equals": true
+									},
+									{
+										"key": "section_id",
+										"value": "{{SECTION_ID}}",
+										"equals": true
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					}
+				]
+			},
+			{
+				"name": "Programme Tab",
+				"description": "",
+				"item": [
+					{
+						"name": "Programme Complete",
+						"request": {
+							"method": "POST",
+							"header": [
+								{
+									"key": "X-Requested-With",
+									"value": "XMLHttpRequest"
+								},
+								{
+									"key": "User-Agent",
+									"value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded"
+								},
+								{
+									"key": "Accept",
+									"value": "*/*"
+								},
+								{
+									"key": "Referer",
+									"value": "https://www.onlinescoutmanager.co.uk/main.php?v=23e754b7e12c038aa2a6ce84c62d781a&sid=037acbb90fa867c6e42cee93db9635c9"
+								},
+								{
+									"key": "Accept-Encoding",
+									"value": "gzip, deflate, sdch"
+								},
+								{
+									"key": "Accept-Language",
+									"value": "en-GB,en-US;q=0.8,en;q=0.6"
+								},
+								{
+									"key": "Cookie",
+									"value": "PHPSESSID=bg1re02r5qt4lifctpqv69dr92; i18next=en; __utmt=1; email=jacob%404thletchworth.com; phpbb3_djkzkk_u=13688; phpbb3_djkzkk_k=; phpbb3_djkzkk_sid=037acbb90fa867c6e42cee93db9635c9; __utma=26946530.1080014191.1457083174.1457361658.1460549758.5; __utmb=26946530.11.8.1460549771601; __utmc=26946530; __utmz=26946530.1457083174.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+								}
+							],
+							"body": {
+								"mode": "urlencoded",
+								"urlencoded": [
+									{
+										"key": "apiid",
+										"value": "{{API_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "token",
+										"value": "{{API_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "userid",
+										"value": "{{USER_ID}}",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "{{USER_SECRET}}",
+										"type": "text"
+									}
+								]
+							},
+							"url": {
+								"raw": "https://www.onlinescoutmanager.co.uk/ext/programme/?action=getProgrammeSummary&sectionid={{SECTION_ID}}&termid=127064",
+								"protocol": "https",
+								"host": [
+									"www",
+									"onlinescoutmanager",
+									"co",
+									"uk"
+								],
+								"path": [
+									"ext",
+									"programme",
+									""
+								],
+								"query": [
+									{
+										"key": "action",
+										"value": "getProgrammeSummary"
+									},
+									{
+										"key": "sectionid",
+										"value": "{{SECTION_ID}}"
+									},
+									{
+										"key": "termid",
+										"value": "127064"
+									}
+								]
+							},
+							"description": ""
+						},
+						"response": []
+					}
+				]
+			},
+			{
+				"name": "Get Invoice Details",
+				"request": {
+					"method": "POST",
+					"header": [],
+					"body": {
+						"mode": "urlencoded",
+						"urlencoded": [
+							{
+								"key": "apiid",
+								"value": "{{API_ID}}",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "{{API_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "userid",
+								"value": "{{USER_ID}}",
+								"type": "text"
+							},
+							{
+								"key": "secret",
+								"value": "{{USER_SECRET}}",
+								"type": "text"
+							}
+						]
+					},
+					"url": {
+						"raw": "https://www.onlinescoutmanager.co.uk/ext/finances/invoices/?action=getInvoiceRecords&invoiceid={{INVOICE_ID}}&sectionid={{SECTION_ID}}&dateFormat=uk",
+						"protocol": "https",
+						"host": [
+							"www",
+							"onlinescoutmanager",
+							"co",
+							"uk"
+						],
+						"path": [
+							"ext",
+							"finances",
+							"invoices",
+							""
+						],
+						"query": [
+							{
+								"key": "action",
+								"value": "getInvoiceRecords"
+							},
+							{
+								"key": "invoiceid",
+								"value": "{{INVOICE_ID}}"
+							},
+							{
+								"key": "sectionid",
+								"value": "{{SECTION_ID}}"
+							},
+							{
+								"key": "dateFormat",
+								"value": "uk"
+							}
+						]
+					},
+					"description": ""
+				},
+				"response": []
+			}
+		]
+	}
